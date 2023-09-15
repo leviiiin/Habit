@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    
+
     <div class="app">
         <div class="panel">
             <img class="logo" src="./images/logo.svg" alt="Logo Habbit App">
@@ -41,12 +41,7 @@
                     <div class="habbit">
                         <div class="habbit__day">День _</div>
                         <form class="habbit__form" onsubmit="addDays(event)">
-                            <input 
-                            name="comment" 
-                            class="input_icon" 
-                            type="text" 
-                            placeholder="Коментарий"
-                            >
+                            <input name="comment" class="input_icon" type="text" placeholder="Коментарий">
                             <img class="input__icon" src="./images/comment-icon.svg" alt="comment icon">
                             <button class="button" type="submit">Готово</button>
                         </form>
@@ -59,12 +54,11 @@
                 <h2>Нова звичка</h2>
                 <div class="icon-label">Іконка</div>
                 <div class="icon-select">
-                    <button class="icon icon_active" 
-                    onclick="setIcon(this, 'sport')">
+                    <button class="icon icon_active" onclick="setIcon(this, 'sport')">
                         <img src="./images/sport.svg" alt=Sport">
                     </button>
                     <button class="icon" onclick="setIcon(this, 'water')">
-                        <img src="./images/bottle.svg" alt="Water">
+                        <img src="./images/water.svg" alt="Water">
                     </button>
                     <button class="icon" onclick="setIcon(this, 'food')">
                         <img src="./images/food.svg" alt="Food">
@@ -72,13 +66,7 @@
                 </div>
                 <form class="popup__form" onsubmit="addHabbit(event)">
                     <input type="text" name="name" placeholder="Название">
-                    <input 
-                    type="text" 
-                    name="icon" 
-                    hidden 
-                    placeholder="Иконка"
-                    value="sport"
-                    >
+                    <input type="text" name="icon" hidden placeholder="Иконка" value="sport">
                     <input type="number" name="target" placeholder="Цель">
                     <button class="button" type="submit">Додати</button>
                 </form>

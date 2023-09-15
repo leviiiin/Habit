@@ -23,7 +23,7 @@ const page = {
 }
 
 // utils 
-function loadData() {
+function loadData () {
     const habbitsString = localStorage.getItem(HABBIT_KEY);
     const habbitsArray = JSON.parse(habbitsString);
     if (Array.isArray(habbitsArray)) {
@@ -175,6 +175,7 @@ function setIcon(context, icon) {
     const activeIcon = document.querySelector('.icon.icon_active');
     activeIcon.classList.remove('icon_active');
     context.classList.add('icon_active');
+    console.log(context);
 }
 
 function addHabbit(event) {
@@ -183,7 +184,7 @@ function addHabbit(event) {
     if (!data) {
         return;
     }
-    const maxId = habbits.reduce((acc, habbit) => acc > habbit.id ? acc : habbit.id, 0 );
+    const maxId = habbits.reduce((acc, habbit) => acc > habbit.id ? acc : habbit.id, 0);
     habbits.push({
         id: maxId + 1,
         name: data.name,
@@ -204,7 +205,7 @@ function addHabbit(event) {
     const urlHabbit = habbits.find(habbit => habbit.id == hashId);
     if (urlHabbit) {
         rerender(urlHabbit.id);
-    } else { 
+    } else if (habbits.length) {
         rerender(habbits[0].id);
     }
 })()
