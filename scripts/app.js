@@ -82,7 +82,7 @@ function rerenderMenu(activeHabbit) {
             element.setAttribute('menu-habbit-id', habbit.id);
             element.classList.add('menu__item');
             element.addEventListener('click', () => rerender(habbit.id));
-            element.innerHTML = `<img src="/images/${habbit.icon}.svg" alt="${habbit.name}">`
+            element.innerHTML = `<img src="./images/${habbit.icon}.svg" alt="${habbit.name}">`
             if (activeHabbit.id === habbit.id) {
                 element.classList.add('menu__item_active');
             }
@@ -114,7 +114,7 @@ function rerenderContent(activeHabbit) {
         element.innerHTML = `<div class="habbit__day">День ${Number(index) + 1}</div>
         <div class="habbit__comment">${activeHabbit.days[index].comment}</div>
         <button class="habbit__delete" onclick="deleteDay(${index})">
-            <img src="/images/del.svg" alt="delete">
+            <img src="./images/del.svg" alt="delete">
         </button>`
         page.content.daysContainer.appendChild(element);
     }
