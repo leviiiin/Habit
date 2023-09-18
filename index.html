@@ -27,7 +27,7 @@
                 <h1 class="h1">-</h1>
                 <div class="progress">
                     <div class="progress__text">
-                        <div class="progress__name">Прогрес</div>
+                        <div class="progress__name">Progress</div>
                         <div class="progress__percent">%</div>
                     </div>
                     <div class="progress__bar">
@@ -39,11 +39,11 @@
                 <div id="days"></div>
                 <div>
                     <div class="habbit">
-                        <div class="habbit__day">День _</div>
+                        <div class="habbit__day">Day _</div>
                         <form class="habbit__form" onsubmit="addDays(event)">
-                            <input name="comment" class="input_icon" type="text" placeholder="Коментарий">
+                            <input name="comment" class="input_icon" type="text" placeholder="Сomment">
                             <img class="input__icon" src="./images/comment-icon.svg" alt="comment icon">
-                            <button class="button" type="submit">Готово</button>
+                            <button class="button" type="submit">Ready</button>
                         </form>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
         </div>
         <div class="cover cover_hidden" id="add-hidden-popup">
             <div class="popup">
-                <h2>Нова звичка</h2>
-                <div class="icon-label">Іконка</div>
+                <h2>New habit</h2>
+                <div class="icon-label">Icon</div>
                 <div class="icon-select">
                     <button class="icon icon_active" onclick="setIcon(this, 'sport')">
                         <img src="./images/sport.svg" alt=Sport">
@@ -65,10 +65,10 @@
                     </button>
                 </div>
                 <form class="popup__form" onsubmit="addHabbit(event)">
-                    <input type="text" name="name" placeholder="Название">
-                    <input type="text" name="icon" hidden placeholder="Иконка" value="sport">
-                    <input type="number" name="target" placeholder="Цель">
-                    <button class="button" type="submit">Додати</button>
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="icon" hidden placeholder="Icon" value="sport">
+                    <input type="number" name="target" placeholder="Target">
+                    <button class="button" type="submit">Add</button>
                 </form>
                 <button class="popup__close" onclick="togglePopup()">
                     <img src="./images/close.svg" alt="close">

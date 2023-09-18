@@ -111,14 +111,14 @@ function rerenderContent(activeHabbit) {
     for (const index in activeHabbit.days) {
         const element = document.createElement('div');
         element.classList.add('habbit');
-        element.innerHTML = `<div class="habbit__day">День ${Number(index) + 1}</div>
+        element.innerHTML = `<div class="habbit__day">Day ${Number(index) + 1}</div>
         <div class="habbit__comment">${activeHabbit.days[index].comment}</div>
         <button class="habbit__delete" onclick="deleteDay(${index})">
             <img src="./images/del.svg" alt="delete">
         </button>`
         page.content.daysContainer.appendChild(element);
     }
-    page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`
+    page.content.nextDay.innerHTML = `Day ${activeHabbit.days.length + 1}`
 }
 
 function rerender(activeHabbitId) {
